@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Öğrenci Evi</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">Zckl_N_nr5szFPLPmHwk6wqIsRQOe-UVImGsl</string>
+</resources>

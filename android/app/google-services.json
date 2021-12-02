@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216514231839",
+    "project_id": "ogrencievi-d9f09",
+    "storage_bucket": "ogrencievi-d9f09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216514231839:android:d4a1f6a8ed0381ba685f2a",
+        "android_client_info": {
+          "package_name": "com.ogrencievi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216514231839-u3hntsr6lj3usclt9u38i98pplj5t9ja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCygIWLgiFjuytpiCnUwP3jNt6Tj0jsPpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216514231839-u3hntsr6lj3usclt9u38i98pplj5t9ja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
