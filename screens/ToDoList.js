@@ -157,7 +157,8 @@ export default function Notification ({route, navigation}) {
          <FlatList
          //inverted={true} // itemleri aşağıdan yukarıya sıralar
          data={notificationList}
-         ListFooterComponent={NotificationSubmit()}
+         ListFooterComponent={null//NotificationSubmit()
+         }
          style={{ height:SIZES.height*0.79,paddingHorizontal:0, width:SIZES.width}}
          keyExtractor={(item) => item.key}
          showsHorizontalScrollIndicator={false}

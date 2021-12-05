@@ -130,7 +130,7 @@ const ShoppingAdd = ({route, navigation}) => {
         .collection('shopping')
         .doc()
         .set({
-          shoppingName: shopName ? shopName : 'Alışveriş',
+          shoppingName: shopName ? shopName : 'Fatura',
           shopDescription: shopDescription,
           name: shoppingUser,
           email: userEmail,
@@ -138,7 +138,7 @@ const ShoppingAdd = ({route, navigation}) => {
           salesExp: shopSales / usersss.length / 1,
           date: shopDate,
           image: imageOk ? plugUrl : 'noData',
-          type: '1',
+          type: '2',
           users: userss,
           dateOfRegistration: firestore.FieldValue.serverTimestamp(),
           hesapID: userInfo.hesapID,

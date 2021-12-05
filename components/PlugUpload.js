@@ -53,10 +53,9 @@ const PlugUpload = (props) => {
   }
   const chooseFile = () => {
     ImagePicker.openCamera({
-      width: 900,
-      height: 1200,
-      cropping: true,
-      compressImageQuality:0.8,
+
+      cropping: false,
+      compressImageQuality:1,
       cropperCancelText:'Vazgeç',
       cropperChooseText:'Fişi Kırp',
       loadingLabelText:'Fotoğraf ayarlanıyor',
@@ -75,10 +74,9 @@ const PlugUpload = (props) => {
 
   const openGallery = () => {
     ImagePicker.openPicker({
-      width: 900,
-      height: 1200,
-      cropping: true,
-      compressImageQuality:0.8,
+
+      cropping: false,
+      compressImageQuality:1,
       cropperCancelText:'Vazgeç',
       cropperChooseText:'Fişi Kırp',
       loadingLabelText:'Fotoğraf ayarlanıyor',

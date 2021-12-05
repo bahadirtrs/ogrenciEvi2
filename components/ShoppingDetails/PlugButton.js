@@ -14,7 +14,7 @@ export default function ItemOne(props) {
         />
         <TouchableOpacity onPress={()=>setModalVisible(!modalVisible)} activeOpacity={0.8} style={styles.shopItem}>
             <View style={{paddingLeft:20}} >
-                <Text style={[styles.shopItemTitle, {color:COLORS.white}]}>Alışveriş Fişini Görüntüle</Text>
+                <Text style={[styles.shopItemTitle, {color:COLORS.white}]}>{props.text?props.text:'Alışveriş Fişini Görüntüle'}</Text>
             </View>
         </TouchableOpacity>
     </>

@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
         fontSize:16,
         ...FONTS.regular,
         color:'#000',
-        paddingVertical:0
+        paddingTop:10,
+        paddingBottom:5
     }
 })
 

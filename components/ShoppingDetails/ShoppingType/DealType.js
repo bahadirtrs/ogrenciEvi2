@@ -14,13 +14,13 @@ export default function DealType({data}) {
     <View style={styles.container}>
         <View style={{height:10}}></View>
         <ItemOne icon={"clipboard"} title={"Alışveriş Adı"} answer={data.shoppingName} />
-        <ItemOne icon={"clipboard"} title={"Alışveriş Açıklaması"} answer={data.shoppingDescription} />
+        <ItemOne icon={"clipboard"} title={"Alışveriş Açıklaması"} answer={data.shopDescription} />
         <ItemOne icon={"user-check"}  title={"Alışveriş Yapan"} answer={data.name} />
         <ItemOneAmount icon={"comment-dollar"}  title={"Alışveriş Tutarı"} answer={data.sales} />
         <ItemOne icon={"calendar-alt"}  title={"Alışveriş Tarihi"} answer={data.date && moment(data.date).format('LL')} />
         <ItemTwo icon={"users"}  title={"Alışverişe Dahil Olanlar"} answer={data&&data.users} />
         <ItemOneAmount icon={"money-bill-wave"} title={"Kişi Başına Düşen Tutar"} answer={data.salesExp} />
-        <PlugButton imageUrl={data.image}/>
+        {data.image!=='noData'&& <PlugButton imageUrl={data.image} text={'Alışveriş Görselini Görüntüle'} /> }
     </View>
     )
 }

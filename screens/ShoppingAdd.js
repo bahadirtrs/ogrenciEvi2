@@ -15,6 +15,7 @@ import ShoppingUserImage from '../components/Shopping/ShoppingUserImage';
 import InfoAlert from '../components/InfoAlert';
 import LanguageSelect from '../language';
 import NotificationAdd from '../function/NotificationAdd'
+import ImageViewer from 'react-native-image-zoom-viewer';
 const uniqueID=Math.floor(Math.random() * 10000000) + 1 ;
 const options = {
   weekday: 'long',
@@ -66,6 +67,28 @@ const ShoppingAdd = ({route, navigation}) => {
       }
     } catch (e) {}
   };
+
+
+
+
+  const images = [{
+    // Simplest usage.
+    url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460',
+ 
+    // width: number
+    // height: number
+    // Optional, if you know the image size, you can set the optimization performance
+ 
+    // You can pass props to <Image />.
+    props: {
+        // headers: ...
+    }
+}]
+
+
+
+
+
 
   const UserList = (userInfom, name) => {
     console.log('2.adım', userInfo.hesapID);
@@ -240,6 +263,7 @@ const ShoppingAdd = ({route, navigation}) => {
           </View>
         {/*/////Header end//////*/}
         {/*/////Alışverişe dahil olanlar start//////*/}
+        
           <View style={{  backgroundColor: '#f1f1f1', paddingBottom: 100, paddingTop:5}}>
             <View
               style={[

@@ -67,6 +67,9 @@ export default function Shopping({data,userName}) {
                 </View>  
             </View>
             <View style={{flex:5}}>
+                <View style={{minWidth:100, alignItems:'flex-end' }} >
+                    <Text style={styles.amountMarket2}>{data && (data.sales).toFixed(2)} ₺</Text>
+                </View>
             {
                 (data.name==userName)
                 ? sales==true
@@ -75,17 +78,17 @@ export default function Shopping({data,userName}) {
                     <Text style={styles.amountMarket}>+{data && (data.sales-data.salesExp).toFixed(1)} ₺</Text>
                 </View>
                 :<View style={{minWidth:100, alignItems:'flex-end' }} >
-                <Text style={styles.amountMarket}>+{data && (data.sales).toFixed(1)} ₺</Text>
+                <Text style={styles.amountMarket}>+{data && (data.sales).toFixed(2)} ₺</Text>
                 </View>
                 :
                 sales==true 
                 ?
                 <View style={{minWidth:100, alignItems:'flex-end' }} >
-                    <Text style={styles.amountMarketTwo}>-{data && data.salesExp.toFixed(1)} ₺</Text>
+                    <Text style={styles.amountMarketTwo}>-{data && data.salesExp.toFixed(2)} ₺</Text>
                 </View>
                 :
                 <View style={{minWidth:100, alignItems:'flex-end' }} >
-                    <Text style={[styles.amountMarketTwo, {color:'#555'}]}>0.00₺</Text>
+                    <Text style={[styles.amountMarketTwo, {color:'#555'}]}>0.00 ₺</Text>
                 </View>
             }
             </View>
@@ -170,13 +173,18 @@ const styles = StyleSheet.create({
     },
 
     amountMarket:{
-        fontSize:18,
+        fontSize:14,
+        ...FONTS.bold,
+        color:COLORS.lightGreen,
+    },
+    amountMarket2:{
+        fontSize:16,
         ...FONTS.bold,
         color:COLORS.lightGreen,
     },
 
     amountMarketTwo:{
-        fontSize:18,
+        fontSize:14,
         ...FONTS.bold,
         color:COLORS.primary,
     },

@@ -60,7 +60,7 @@ export default function Header({data,username,userInfo, closeButton, butonPress}
         data && data!=''
         ? <View style={{flexDirection:'row'}}>
             <View style={styles.profileEnd}>
-                <Text style={styles.amountTitle}>Alacağınız Tutar</Text>
+                <Text style={styles.amountTitle}>Toplam Alacak</Text>
                 <Text style={styles.amount}>
                     {(para>99999
                      ? '+'+borc.toFixed(0).slice(0,5)
@@ -69,7 +69,7 @@ export default function Header({data,username,userInfo, closeButton, butonPress}
                 </Text>
             </View> 
             <View style={styles.profileEndRight}>
-                <Text style={styles.amountTitle}>Ödeyeceğiniz Tutar</Text>
+                <Text style={styles.amountTitle}>Toplam Borç</Text>
                 <Text style={styles.amount}>
                     {(borc>99999
                      ?  '+'+borc.toFixed(0).slice(0,5)

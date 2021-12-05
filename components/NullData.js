@@ -3,11 +3,18 @@ import { View, Text,TouchableOpacity, StyleSheet } from 'react-native'
 import { COLORS, FONTS, SIZES, icons, images } from '../constants';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-export default function NullData() {
+export default function NullData({tabSelect}) {
     return (
     <View style={styles.container} >
         <Icon style={{paddingVertical:20}} name={'notes-medical'} size={75} color={COLORS.lightGreen} />
-        <Text style={styles.text} >Burada gösterecek bir alışveriş bulamadık! Hemen bir alışveriş girmeyi dene!</Text>
+        <Text style={styles.text}>
+            {tabSelect=='1'
+                ?"Burada gösterecek bir alışveriş bulamadık! Hemen bir alışveriş girmeyi dene!"
+                : tabSelect=='2'
+                    ? "Burada gösterecek bir fatura bulamadık! Hemen bir fatura girmeyi dene!"
+                    : "Burada gösterecek bir tahsilat bulamadık! Hemen bir tahsilat girmeyi dene!"
+            }
+            </Text>
     </View> 
 
     )

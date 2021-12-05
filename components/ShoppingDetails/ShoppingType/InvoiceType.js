@@ -5,7 +5,9 @@ import ItemOne from '../ItemOne'
 import PlugButton from '../PlugButton'
 import ItemTwo from '../ItemTwo'
 import ItemOneAmount from '../ItemOneAmount'
-
+import moment from 'moment'
+import 'moment/locale/tr'
+moment.locale('tr')
 
 
 export default function DealType({data}) {
@@ -15,10 +17,11 @@ export default function DealType({data}) {
         <ItemOne icon={"clipboard"} title={"Fatura Adı"} answer={data.shoppingName} />
         <ItemOne icon={"user-check"}  title={"Faturayı Ödeyen"} answer={data.name} />
         <ItemOneAmount icon={"comment-dollar"}  title={"Fatura Tutarı"} answer={data.sales} />
-        <ItemOne icon={"calendar-alt"}  title={"Son Ödeme Tarihi"} answer={"21 Kasım 2021, Cumartesi"} />
+        <ItemOne icon={"calendar-alt"}  title={"Son Ödeme Tarihi"} answer={data.date && moment(data.date).format('LL')} />
         <ItemTwo icon={"users"}  title={"Alışverişe Dahil Olanlar"} answer={data&&data.users} />     
         <ItemOneAmount icon={"money-bill-wave"} title={"Kişi Başına Düşen Tutar"} answer={data.salesExp} />
-        <PlugButton/> 
+        {data.image!=='noData'&& <PlugButton imageUrl={data.image} text={'Fatura Görselini Görüntüle'} /> }
+        
     </View>
     )
 }
